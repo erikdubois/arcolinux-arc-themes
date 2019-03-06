@@ -70,7 +70,7 @@ case $DISTRO in
 
 	;;
 
-	Arch|ArchMerge|ArchMergeD|Antergos)
+	Arch|ArchMerge|ArchMergeD|Antergos|ArcoLinux)
 
 		sudo pacman -S git gnome-themes-standard gtk-engine-murrine autoconf automake pkg-config inkscape optipng gnome-shell --needed
 

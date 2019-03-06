@@ -18,12 +18,15 @@ echo "This will always be the best possible up-to-date version you can have!!!"
 echo "Straight from github..."
 echo "#####################################################################"
 
-git clone https://github.com/horst3180/arc-theme --depth 1 /tmp/arc-theme && cd /tmp/arc-theme
+echo "Deleting old files and downloading the latest arc-theme from github"
+[ -d arc-theme ] && sudo rm -rf arc-theme
+echo "Downloading the latest arc-theme from github"
+git clone https://github.com/NicoHood/arc-theme
+
+cd arc-theme
 ./autogen.sh --prefix=/usr
 sudo make install
-rm -rf /tmp/arc-theme
 
-# sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
 echo "#####################################################################"
 echo "The original arc theme is installed. Select Arc, Arc-Dark or Arc-Darker."
 

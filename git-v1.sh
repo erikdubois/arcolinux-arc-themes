@@ -33,6 +33,10 @@
 
 # git reset --hard orgin/master
 
+if [ -d Use-this-for-just-one-theme/arc-theme ]; then
+	sudo rm -rf Use-this-for-just-one-theme/arc-theme
+fi
+
 if [ -d arc-theme ]; then
 	sudo rm -rf arc-theme
 fi
