@@ -19,8 +19,8 @@ git clone https://github.com/NicoHood/arc-theme
 theme_count=0
 
 #what themes are we going to create
-#arrayname=(Blood Botticelli Casablanca Crimson Emerald Evopop Fire Froly Havelock Hibiscus Mandy Mantis Niagara Numix Orchid Paper Polo Punch Smoke Tacao Tory)
-arrayname=(Casablanca Crimson)
+arrayname=(Blood Botticelli Casablanca Crimson Emerald Evopop Fire Froly Havelock Hibiscus Mandy Mantis Niagara Numix Orchid Paper Polo Punch Smoke Tacao Tory)
+#arrayname=(Casablanca Crimson)
 
 for m in "${arrayname[@]}"
   do
