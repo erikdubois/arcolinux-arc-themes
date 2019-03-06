@@ -14,7 +14,7 @@
 theme_count=0
 
 #what themes are we going to create
-#arrayname=(Blood Botticelli Casablanca Crimson Emerald Evopop Fire Froly Havelock Hibiscus Mandy Mantis Niagara Numix Orchid Paper Polo Punch Smoke Tacao Tory)
+#arrayname=(Aqua Blood Botticelli Casablanca Crimson Emerald Evopop Fire Froly Havelock Hibiscus Mandy Mantis Niagara Numix Orchid Paper Polo Punch Smoke Tacao Tory)
 arrayname=(Casablanca Crimson)
 
 for m in "${arrayname[@]}"
@@ -27,6 +27,10 @@ for m in "${arrayname[@]}"
 
     case "${m}" in
 
+    Aqua)
+        choice="Aqua"
+        newcolour1="66a8cb"
+        ;;
     Blood)
         choice="Blood"
         newcolour1="cf0808"
@@ -90,6 +94,10 @@ for m in "${arrayname[@]}"
     Paper)
         choice="Paper"
         newcolour1="90a4ae"
+            ;;
+    Pink)
+        choice="Pink"
+        newcolour1="ce6ca2"
             ;;
     Polo)
         choice="Polo"
