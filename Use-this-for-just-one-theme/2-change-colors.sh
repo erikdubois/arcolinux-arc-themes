@@ -10,6 +10,16 @@
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
 ##################################################################################################################
+
+echo "Deleting old files and downloading the latest arc-theme from github"
+echo
+[ -d arc-theme ] && rm -rf arc-theme
+
+echo "Downloading the latest arc-theme from github"
+git clone https://github.com/NicoHood/arc-theme
+
+
+
 echo "#####################################################################"
 echo "#####################################################################"
 echo "All colours in the folder arc-theme/common are still the original blue ones from github!"

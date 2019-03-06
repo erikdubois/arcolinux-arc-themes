@@ -72,7 +72,7 @@ case $DISTRO in
 
 	Arch|ArchMerge|ArchMergeD|Antergos)
 
-		sudo pacman -S git gnome-themes-standard gtk-engine-murrine autoconf automake pkg-config inkscape optipng --needed
+		sudo pacman -S git gnome-themes-standard gtk-engine-murrine autoconf automake pkg-config inkscape optipng gnome-shell --needed
 
 	;;
 
@@ -83,22 +83,13 @@ case $DISTRO in
 	;;
 
 	*)
-		echo "No dependancies installed."
+		echo "No dependencies installed."
 		echo "No installation lines for your system."
 		;;
 esac
 
 echo "We install all needed software depending on the distro you are on."
 echo
-echo "Deleting old files and downloading the latest arc-theme from github"
-echo
-[ -d arc-theme ] && rm -rf arc-theme
-
-echo "Downloading the latest arc-theme from github"
-git clone https://github.com/horst3180/arc-theme.git
-
-#Openbox needs to be themed as well
-cp -r openbox-3  arc-theme/common/
 
 echo "################################################################"
 echo "Next up figure out the colour accent of your new Arc theme online or with gpick or other software."

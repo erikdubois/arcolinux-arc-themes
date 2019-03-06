@@ -10,22 +10,22 @@
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
 ##################################################################################################################
+
 echo "#####################################################################"
-echo "Deleting all old assets i.e. png with blue colour in the arc-theme/common folder"
+echo "This is the actual creation of your theme."
+echo "Installing your personal theme in /usr/share/themes"
+echo "If there is already an Arc theme installed, it will be overwritten."
+echo "We can reinstall the original arc theme again later."
+echo "#####################################################################"
 
-rm -rf arc-theme/common/gtk-2.0/assets/*.png
-rm -rf arc-theme/common/gtk-2.0/assets-dark/*.png
-rm -rf arc-theme/common/gtk-2.0/menubar-toolbar/*.png
-rm -rf arc-theme/common/gtk-3.0/3.14/assets/*.png
-rm -rf arc-theme/common/gtk-3.0/3.16/assets/*.png
-rm -rf arc-theme/common/gtk-3.0/3.18/assets/*.png
-rm -rf arc-theme/common/gtk-3.0/3.20/assets/*.png
+cd arc-theme
+./autogen.sh --prefix=/usr
+sudo make install
 
-rm -rf arc-theme/common/xfwm4/assets/*.png
-rm -rf arc-theme/common/xfwm4/assets-dark/*.png
 
-echo "All png's have been deleted"
-echo "Proceed to making the assets."
-echo
-echo "Run next script to make the assets i.e. the png's with your colour."
+echo "#####################################################################"
+echo "The script will add the folders Arc, Arc-Dark and Arc-Darker to /usr/share/themes."
+echo "In effect it will overwrite the original Arc theme if you had it installed."
+echo "#####################################################################"
+echo "Run next script to copy and rename the themes."
 echo "#####################################################################"

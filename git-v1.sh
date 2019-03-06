@@ -44,6 +44,7 @@ if [ -f linux* ]; then
     	exit 0
 fi
 
+sudo rm -rf arc-theme
 
 # checking if I have the latest files from github
 echo "Checking for newer files online first"
