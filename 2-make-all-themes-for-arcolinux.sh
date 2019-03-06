@@ -11,19 +11,23 @@
 #
 ##################################################################################################################
 
-echo "Deleting old files and downloading the latest arc-theme from github"
-[ -d arc-theme ] && sudo rm -rf arc-theme
-echo "Downloading the latest arc-theme from github"
-git clone https://github.com/NicoHood/arc-theme
+
+
 
 theme_count=0
 
 #what themes are we going to create
-arrayname=(Blood Botticelli Casablanca Crimson Emerald Evopop Fire Froly Havelock Hibiscus Mandy Mantis Niagara Numix Orchid Paper Polo Punch Smoke Tacao Tory)
-#arrayname=(Casablanca Crimson)
+#arrayname=(Blood Botticelli Casablanca Crimson Emerald Evopop Fire Froly Havelock Hibiscus Mandy Mantis Niagara Numix Orchid Paper Polo Punch Smoke Tacao Tory)
+arrayname=(Casablanca Crimson)
 
 for m in "${arrayname[@]}"
   do
+
+    echo "Deleting old files and downloading the latest arc-theme from github"
+    [ -d arc-theme ] && sudo rm -rf arc-theme
+    echo "Downloading the latest arc-theme from github"
+    git clone https://github.com/NicoHood/arc-theme
+
     case "${m}" in
 
     Blood)
@@ -209,6 +213,7 @@ for m in "${arrayname[@]}"
   cd arc-theme
   ./autogen.sh --prefix=/usr
   sudo make install
+  cd ..
 
 
   echo "#####################################################################"
