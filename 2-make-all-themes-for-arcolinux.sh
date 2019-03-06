@@ -118,6 +118,7 @@ for m in "${arrayname[@]}"
   tput setaf 1
   echo "Start Creation of theme nr : " $theme_count
   echo "Start Creation of theme name : " $choice
+  echo "Using this color : " $newcolour1
   tput sgr0
   #############################################
   #changing all blue colours
