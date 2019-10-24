@@ -14,8 +14,8 @@
 theme_count=0
 
 #what themes are we going to create
-#arrayname=(Aqua Blood Botticelli Casablanca Crimson Emerald Evopop Fire Froly Havelock Hibiscus Mandy Mantis Niagara Numix Orchid Paper Polo Punch Smoke Tacao Tory)
-arrayname=(Casablanca Crimson)
+arrayname=(Aqua Blood Botticelli Casablanca Crimson Emerald Evopop Fire Froly Havelock Hibiscus Mandy Mantis Niagara Numix Orchid Paper Polo Punch Smoke Tacao Tory)
+#arrayname=(Casablanca Crimson)
 
 for m in "${arrayname[@]}"
   do
