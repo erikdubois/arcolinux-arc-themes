@@ -70,9 +70,9 @@ case $DISTRO in
 
 	;;
 
-	Arch|ArchMerge|ArchMergeD|Antergos|ArcoLinux|ArcoLinuxD|ArcoLinuxB)
+	Arch|ArcoLinux|ArcoLinuxD|ArcoLinuxB)
 
-		sudo pacman -S git gnome-themes-standard gtk-engine-murrine autoconf automake pkg-config inkscape optipng gnome-shell --needed
+		sudo pacman -S git gnome-themes-standard gtk-engine-murrine autoconf automake pkg-config inkscape optipng gnome-shell sassc --needed
 
 	;;
 
