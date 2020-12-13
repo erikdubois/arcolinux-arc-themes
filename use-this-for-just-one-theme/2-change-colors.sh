@@ -16,7 +16,7 @@ echo
 [ -d arc-theme ] && rm -rf arc-theme
 
 echo "Downloading the latest arc-theme from github"
-git clone https://github.com/NicoHood/arc-theme
+git clone https://github.com/jnsh/arc-theme
 
 
 

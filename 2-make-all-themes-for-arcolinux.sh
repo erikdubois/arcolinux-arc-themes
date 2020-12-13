@@ -23,7 +23,7 @@ for m in "${arrayname[@]}"
     echo "Deleting old files and downloading the latest arc-theme from github"
     [ -d arc-theme ] && sudo rm -rf arc-theme
     echo "Downloading the latest arc-theme from github"
-    git clone https://github.com/NicoHood/arc-theme
+    git clone https://github.com/jnsh/arc-theme
 
     case "${m}" in
 
@@ -217,7 +217,8 @@ for m in "${arrayname[@]}"
 
 
   cd arc-theme
-  ./autogen.sh --prefix=/usr
+  #./autogen.sh --prefix=/usr
+  ./autogen.sh --prefix=/usr --with-gnome-shell=3.38 --with-cinnamon=4.4 --with-gtk3=3.24
   sudo make install
   cd ..
 
