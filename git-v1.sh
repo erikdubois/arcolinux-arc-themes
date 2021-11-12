@@ -33,16 +33,9 @@
 
 # git reset --hard orgin/master
 
-if [ -d use-this-for-just-one-theme/arc-theme ]; then
-	sudo rm -rf Use-this-for-just-one-theme/arc-theme
-fi
 
 if [ -d arc-theme ]; then
-	sudo rm -rf arc-theme
-fi
-
-if [ -f config.status ]; then
- 	rm config.status
+	rm -rf arc-theme
 fi
 
 # checking if I have the latest files from github
