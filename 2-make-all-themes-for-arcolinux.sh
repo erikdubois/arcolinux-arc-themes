@@ -25,7 +25,8 @@ for m in "${arrayname[@]}"
     echo "Downloading the latest arc-theme from github"
     git clone https://github.com/jnsh/arc-theme
 
-    case "${m}" in
+    #case "${m}" in
+    case "Punch" in
 
     Aqua)
         choice="Aqua"
@@ -134,6 +135,7 @@ for m in "${arrayname[@]}"
 
   # change all rgb colours
   count=0
+
   rgbfunction () {
   foldcolour1=$1
   fnewcolour1=$2
@@ -200,15 +202,15 @@ for m in "${arrayname[@]}"
 
   }
   count=$[count+1]
-  echo "Fix " $count
+  echo "Fix rgba " $count
   rgbafunction "38, 121, 219" $newcolour1
 
   count=$[count+1]
-  echo "Fix " $count
+  echo "Fix rgba " $count
   rgbafunction "82, 148, 226" $newcolour1
 
   count=$[count+1]
-  echo "Fix " $count
+  echo "Fix rgba " $count
   rgbafunction "65, 137, 223" $newcolour1
 
 
