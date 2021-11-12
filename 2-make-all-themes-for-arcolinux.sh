@@ -217,9 +217,10 @@ for m in "${arrayname[@]}"
 
 
   cd arc-theme
-  #./autogen.sh --prefix=/usr
-  ./autogen.sh --prefix=/usr --with-gnome-shell=3.38 --with-cinnamon=4.4 --with-gtk3=3.24
-  sudo make install
+  [ -d build ] || mkdir build
+  meson setup --prefix=/usr build/
+  meson configure --prefix=/usr build/
+  meson install -C build/
   cd ..
 
 
