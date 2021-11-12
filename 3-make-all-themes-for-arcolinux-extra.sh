@@ -14,32 +14,31 @@
 theme_count=0
 
 # what themes are we going to create
-arrayname=(Aqua
-Blood
-Botticelli
-Casablanca
-Crimson
-Emerald
-Evopop
-Fire
-Froly
-Havelock
-Hibiscus
-Mandy
-Mantis
-Niagara
-Numix
-Orchid
-Paper
-Pink
-Polo
-Punch
-Smoke
-Tacao
-Tory)
+arrayname=(Tangerine
+Rusty-orange
+Red-orange
+Light-blue-grey
+Azure Dodger-blue
+Azul
+Light-salmon
+Carnation
+Warm-pink
+Bright-lilal
+Light-lime-green
+Fern
+Medium-blue
+Soft-blue
+Arcolinux-blue
+Archlinux-blue
+Sky-blue
+Carolina-blue
+Slate-grey
+Pale-grey
+Light-blue-surfn
+Nice-blue)
 
 # or just a few
-# arrayname=(Casablanca Crimson)
+# arrayname=(Nice-blue Pale-grey)
 
 for m in "${arrayname[@]}"
   do
@@ -51,97 +50,120 @@ for m in "${arrayname[@]}"
 
     case "${m}" in
 
-    Aqua)
-        choice="Aqua"
-        newcolour1="66a8cb"
+    Tangerine)
+        # #FF9500
+        choice="Tangerine"
+        newcolour1="FF9500"
         ;;
-    Blood)
-        choice="Blood"
-        newcolour1="cf0808"
+    Rusty-orange)
+        # #E56B1A
+        choice="Rusty-orange"
+        newcolour1="E56B1A"
         ;;
-    Botticelli)
-        choice="Botticelli"
-        newcolour1="82a4b3"
+    Red-orange)
+        # #FE5100
+        choice="Red-orange"
+        newcolour1="FE5100"
         ;;
-    Casablanca)
-        choice="Casablanca"
-        newcolour1="fdb95b"
+    Light-blue-grey)
+        # #B8A8BC
+        choice="Light-blue-gray"
+        newcolour1="B8A8BC"
         ;;
-    Crimson)
-        choice="Crimson"
-        newcolour1="dc143c"
+    Azure)
+        # #10ADFF
+        choice="Azure"
+        newcolour1="10ADFF"
         ;;
-    Emerald)
-        choice="Emerald"
-        newcolour1="1fa732"
+    Dodger-blue)
+        # #2A8DFF
+        choice="Dodger-blue"
+        newcolour1="2A8DFF"
         ;;
-    Evopop)
-        choice="Evopop"
-        newcolour1="1685a6"
+    Azul)
+        # #456CFF
+        choice="Azul"
+        newcolour1="456CFF"
         ;;
-    Fire)
-        choice="Fire"
-        newcolour1="f68516"
+    Light-salmon)
+        # #FFA38D
+        choice="Light-salmon"
+        newcolour1="FFA38D"
         ;;
-    Froly)
-        choice="Froly"
-        newcolour1="fd7980"
+    Carnation)
+        # #FE6D88
+        choice="Carnation"
+        newcolour1="FE6D88"
             ;;
-    Havelock)
-        choice="Havelock"
-        newcolour1="6ba4e7"
+    Warm-pink)
+        # #FD3E84
+        choice="Warm-pink"
+        newcolour1="FD3E84"
         ;;
-    Hibiscus)
-        choice="Hibiscus"
-        newcolour1="d52f61"
+    Bright-lilal)
+        # #CD58FF
+        choice="Bright-lilac"
+        newcolour1="CD58FF"
         ;;
-    Mandy)
-        choice="Mandy"
-        newcolour1="c93648"
+    Light-lime-green)
+        # #B5F652
+        choice="Light-lime-green"
+        newcolour1="B5F652"
         ;;
-    Mantis)
-        choice="Mantis"
-        newcolour1="6aa847"
+    Fern)
+        # #65B058
+        choice="Fern"
+        newcolour1="65B058"
         ;;
-    Niagara)
-        choice="Niagara"
-        newcolour1="42edcc"
+    Medium-blue)
+        # #4A71C4
+        choice="Medium-blue"
+        newcolour1="4A71C4"
         ;;
-    Numix)
-        choice="Numix"
-        newcolour1="ffa726"
+    Soft-blue)
+        # #5481E5
+        choice="Soft-blue"
+        newcolour1="5481E5"
         ;;
-    Orchid)
-        choice="Orchid"
-        newcolour1="ff7def"
+    Arcolinux-blue)
+        # #6790eb
+        choice="Arcolinux-blue"
+        newcolour1="6790eb"
         ;;
-    Paper)
-        choice="Paper"
-        newcolour1="90a4ae"
+    Archlinux-blue)
+        # #1793D1
+        choice="Archlinux-blue"
+        newcolour1="1793D1"
             ;;
-    Pink)
-        choice="Pink"
-        newcolour1="ce6ca2"
+    Sky-blue)
+        # #7EC1FF
+        choice="Sky-blue"
+        newcolour1="7EC1FF"
             ;;
-    Polo)
-        choice="Polo"
-        newcolour1="688bc6"
+    Carolina-blue)
+        # #6BA4E7
+        choice="Carolina-blue"
+        newcolour1="6BA4E7"
             ;;
-    Punch)
-        choice="Punch"
-        newcolour1="c03645"
+    Slate-grey)
+        # #636A78
+        choice="Slate-grey"
+        newcolour1="636A78"
         ;;
-    Smoke)
-        choice="Smoke"
-        newcolour1="a1a1a1"
+    Pale-grey)
+        # #E1E3E7
+        choice="Pale-grey"
+        newcolour1="E1E3E7"
         ;;
-    Tacao)
-        choice="Tacao"
-        newcolour1="efa369"
+    Light-blue-surfn)
+        # #94C2E4
+        choice="Light-blue-surfn"
+        newcolour1="94C2E4"
             ;;
-    Tory)
-        choice="Tory"
-        newcolour1="596bb0"
+    Nice-blue)
+        # #147EB8
+        choice="Nice-blue"
+        newcolour1="147EB8"
             ;;
     esac
 
