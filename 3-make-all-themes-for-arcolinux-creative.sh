@@ -45,6 +45,7 @@ for m in "${arrayname[@]}"
 
     echo "Deleting old files and downloading the latest arc-theme from github"
     [ -d arc-theme ] && rm -rf arc-theme
+    [ -d /tmp/at ] && rm -rf /tmp/at
     echo "Downloading the latest arc-theme from github"
     git clone https://github.com/jnsh/arc-theme
 
@@ -265,8 +266,8 @@ for m in "${arrayname[@]}"
 
   cd arc-theme
   [ -d build ] || mkdir build
-  meson setup --prefix=/usr build/
-  meson configure --prefix=/usr build/
+  meson setup --prefix=/tmp/at build/
+  meson configure --prefix=/tmp/at build/
   meson install -C build/
   cd ..
 
@@ -278,9 +279,9 @@ for m in "${arrayname[@]}"
   function makearc {
   # if there is no hidden folder then make one
   [ -d $HOME"/.themes" ] || mkdir -p $HOME"/.themes"
-  cp -rf /usr/share/themes/Arc $HOME"/.themes"
-  cp -rf /usr/share/themes/Arc-Dark $HOME"/.themes"
-  cp -rf /usr/share/themes/Arc-Darker $HOME"/.themes"
+  cp -rf /tmp/at/share/themes/Arc $HOME"/.themes"
+  cp -rf /tmp/at/share/themes/Arc-Dark $HOME"/.themes"
+  cp -rf /tmp/at/share/themes/Arc-Darker $HOME"/.themes"
 
   mv $HOME"/.themes/Arc" $HOME"/.themes/Arc-"$choice
   mv $HOME"/.themes/Arc-Dark" $HOME"/.themes/Arc-"$choice"-Dark"
@@ -311,7 +312,7 @@ for m in "${arrayname[@]}"
   echo "#####################################################################"
   echo "#####################################################################"
 
-  sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
+  rm -rf /tmp/at/{Arc,Arc-Darker,Arc-Dark}
 
   echo "#####################################################################"
   echo "#####################################################################"

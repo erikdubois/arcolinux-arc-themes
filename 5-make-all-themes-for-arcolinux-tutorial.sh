@@ -26,6 +26,7 @@ for m in "${arrayname[@]}"
 
     echo "Deleting old files and downloading the latest arc-theme from github"
     [ -d arc-theme ] && rm -rf arc-theme
+    [ -d /tmp/at ] && rm -rf /tmp/at
     echo "Downloading the latest arc-theme from github"
     git clone https://github.com/jnsh/arc-theme
 
