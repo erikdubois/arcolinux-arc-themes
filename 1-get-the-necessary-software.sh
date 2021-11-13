@@ -22,11 +22,6 @@ sudo pacman -S inkscape sassc meson gnome-themes-standard gtk-engine-murrine gno
 
 echo "Get the code for Openbox and put it in /tmp"
 
-[ -d /tmp/arc-openbox ] && rm -rf /tmp/arc-openbox
-
-git clone https://github.com/erikdubois/arc-openbox /tmp/arc-openbox
-rm /tmp/arc-openbox/git*
-
 echo "################################################################"
 echo "Next up figure out the colour accent of your new Arc theme online or with gpick or other software."
 echo "Then change the colour for the variable NEWCOLOUR1 in next script, save and run it."
