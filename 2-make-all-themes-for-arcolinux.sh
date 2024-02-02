@@ -65,12 +65,12 @@ Vampire
 Warm-pink)
 
 # or just a few
-arrayname=(
-Aqua
-Archlinux-blue
-Arcolinux-blue
-Azul
-)
+# arrayname=(
+# Aqua
+# Archlinux-blue
+# Arcolinux-blue
+# Azul
+# )
 
 for m in "${arrayname[@]}"
   do

@@ -66,12 +66,12 @@ Vampire
 )
 
 # or just a few
-list=(
-Aqua
-Archlinux-blue
-Arcolinux-blue
-Azul
-)
+# list=(
+# Aqua
+# Archlinux-blue
+# Arcolinux-blue
+# Azul
+# )
 
 for m in "${list[@]}"
   do
