@@ -22,14 +22,18 @@ Azure
 Azure-dodger-blue
 Blood
 Blue-sky
+Blueberry
 Botticelli
 Bright-lilal
 Carnation
 Carolina-blue
 Casablanca
+Cornflower-blue
 Crimson
+Darkish
 Dawn
 Dodger-blue
+Dracul
 Emerald
 Evopop
 Fern
@@ -52,7 +56,9 @@ Paper
 Pink
 Polo
 Punch
+Purpley
 Red-orange
+Red-violet
 Rusty-orange
 Sky-blue
 Slate-grey
@@ -61,19 +67,21 @@ Soft-blue
 Tacao
 Tangerine
 Tory
+Twilight
 Vampire
-Warm-pink)
+Warm-pink
+)
 
 # or just a few
-arrayname=(
-Blueberry
-Cornflower-blue
-Darkish
-Dracul
-Purpley
-Red-violet
-Twilight
-)
+# arrayname=(
+# Blueberry
+# Cornflower-blue
+# Darkish
+# Dracul
+# Purpley
+# Red-violet
+# Twilight
+# )
 
 for m in "${arrayname[@]}"
   do
