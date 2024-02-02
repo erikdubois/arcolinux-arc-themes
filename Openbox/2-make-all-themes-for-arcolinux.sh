@@ -14,34 +14,61 @@
 theme_count=0
 
 # what themes are we going to create
-arrayname=(Aqua
+list=(Aqua
+Archlinux-blue
+Arcolinux-blue
+Azul
+Azure
+Azure-dodger-blue
 Blood
+Blue-sky
 Botticelli
+Bright-lilal
+Carnation
+Carolina-blue
 Casablanca
 Crimson
+Dawn
+Dodger-blue
 Emerald
 Evopop
+Fern
 Fire
 Froly
 Havelock
 Hibiscus
+Light-blue-grey
+Light-blue-surfn
+Light-salmon
 Mandy
 Mantis
+Medium-blue
 Niagara
+Nice-blue
 Numix
 Orchid
+Pale-grey
 Paper
 Pink
 Polo
 Punch
+Red-orange
+Rusty-orange
+Sky-blue
+Slate-grey
 Smoke
+Soft-blue
 Tacao
-Tory)
+Tangerine
+Tory
+Warm-pink
+Vampire
+)
 
 # or just a few
 # arrayname=(Casablanca Crimson)
 
-for m in "${arrayname[@]}"
+for m in "${list[@]}"
   do
 
     [ -d /tmp/arc-openbox ] && rm -rf /tmp/arc-openbox
@@ -51,6 +78,136 @@ for m in "${arrayname[@]}"
 
     case "${m}" in
 
+    Blue-sky)
+        # #7684a8
+        choice="Blue-sky"
+        newcolour1="7684a8"
+        ;;
+    Dawn)
+        # #566282
+        choice="Dawn"
+        newcolour1="566282"
+        ;;
+    Tangerine)
+        # #FF9500
+        choice="Tangerine"
+        newcolour1="FF9500"
+        ;;
+    Rusty-orange)
+        # #E56B1A
+        choice="Rusty-orange"
+        newcolour1="E56B1A"
+        ;;
+    Azure-dodger-blue)
+        # #1e9cff
+        choice="Azure-dodger-blue"
+        newcolour1="1e9cff"
+        ;;
+    Light-blue-grey)
+        # #B8A8BC
+        choice="Light-blue-grey"
+        newcolour1="B8A8BC"
+        ;;
+    Red-orange)
+        # #FE5100
+        choice="Red-orange"
+        newcolour1="FE5100"
+        ;;
+    Light-blue-grey)
+        # #B8A8BC
+        choice="Light-blue-gray"
+        newcolour1="B8A8BC"
+        ;;
+    Azure)
+        # #10ADFF
+        choice="Azure"
+        newcolour1="10ADFF"
+        ;;
+    Dodger-blue)
+        # #2A8DFF
+        choice="Dodger-blue"
+        newcolour1="2A8DFF"
+        ;;
+    Azul)
+        # #456CFF
+        choice="Azul"
+        newcolour1="456CFF"
+        ;;
+    Light-salmon)
+        # #FFA38D
+        choice="Light-salmon"
+        newcolour1="FFA38D"
+        ;;
+    Carnation)
+        # #FE6D88
+        choice="Carnation"
+        newcolour1="FE6D88"
+            ;;
+    Warm-pink)
+        # #FD3E84
+        choice="Warm-pink"
+        newcolour1="FD3E84"
+        ;;
+    Bright-lilal)
+        # #CD58FF
+        choice="Bright-lilac"
+        newcolour1="CD58FF"
+        ;;
+    Fern)
+        # #65B058
+        choice="Fern"
+        newcolour1="65B058"
+        ;;
+    Medium-blue)
+        # #4A71C4
+        choice="Medium-blue"
+        newcolour1="4A71C4"
+        ;;
+    Soft-blue)
+        # #5481E5
+        choice="Soft-blue"
+        newcolour1="5481E5"
+        ;;
+    Arcolinux-blue)
+        # #6790eb
+        choice="Arcolinux-blue"
+        newcolour1="6790eb"
+        ;;
+    Archlinux-blue)
+        # #1793D1
+        choice="Archlinux-blue"
+        newcolour1="1793D1"
+        ;;
+    Sky-blue)
+        # #7EC1FF
+        choice="Sky-blue"
+        newcolour1="7EC1FF"
+        ;;
+    Carolina-blue)
+        # #6BA4E7
+        choice="Carolina-blue"
+        newcolour1="6BA4E7"
+        ;;
+    Slate-grey)
+        # #636A78
+        choice="Slate-grey"
+        newcolour1="636A78"
+        ;;
+    Pale-grey)
+        # #E1E3E7
+        choice="Pale-grey"
+        newcolour1="E1E3E7"
+        ;;
+    Light-blue-surfn)
+        # #94C2E4
+        choice="Light-blue-surfn"
+        newcolour1="94C2E4"
+        ;;
+    Nice-blue)
+        # #147EB8
+        choice="Nice-blue"
+        newcolour1="147EB8"
+        ;;
     Aqua)
         choice="Aqua"
         newcolour1="66a8cb"
@@ -86,7 +243,7 @@ for m in "${arrayname[@]}"
     Froly)
         choice="Froly"
         newcolour1="fd7980"
-            ;;
+        ;;
     Havelock)
         choice="Havelock"
         newcolour1="6ba4e7"
@@ -118,15 +275,15 @@ for m in "${arrayname[@]}"
     Paper)
         choice="Paper"
         newcolour1="90a4ae"
-            ;;
+        ;;
     Pink)
         choice="Pink"
         newcolour1="ce6ca2"
-            ;;
+        ;;
     Polo)
         choice="Polo"
         newcolour1="688bc6"
-            ;;
+        ;;
     Punch)
         choice="Punch"
         newcolour1="c03645"
@@ -138,11 +295,16 @@ for m in "${arrayname[@]}"
     Tacao)
         choice="Tacao"
         newcolour1="efa369"
-            ;;
+        ;;
     Tory)
         choice="Tory"
         newcolour1="596bb0"
-            ;;
+        ;;
+    Vampire)
+        # #555a69
+        choice="Vampire"
+        newcolour1="555a69"
+        ;;
     esac
 
   theme_count=$[theme_count+1]
@@ -258,9 +420,21 @@ for m in "${arrayname[@]}"
   [ -d $HOME"/.themes" ] || mkdir -p $HOME"/.themes"
   cp -rf /tmp/arc-openbox/* $HOME"/.themes"
 
-  mv $HOME"/.themes/Arc" $HOME"/.themes/Arc-"$choice
-  mv $HOME"/.themes/Arc-Dark" $HOME"/.themes/Arc-"$choice"-Dark"
-  mv $HOME"/.themes/Arc-Darker" $HOME"/.themes/Arc-"$choice"-Darker"
+  rm -rf $HOME"/.themes/Arc-"$choice"/openbox-3"
+  rm -rf $HOME"/.themes/Arc-"$choice"-Dark/openbox-3"
+  rm -rf $HOME"/.themes/Arc-"$choice"-Darker/openbox-3"
+
+  rm -rf $HOME"/.themes/Arc-"$choice"/Arc"
+  rm -rf $HOME"/.themes/Arc-"$choice"-Dark/Arc-Dark"
+  rm -rf $HOME"/.themes/Arc-"$choice"-Darker/Arc-Darker"
+
+  mv $HOME"/.themes/Arc/openbox-3" $HOME"/.themes/Arc-"$choice
+  mv $HOME"/.themes/Arc-Dark/openbox-3" $HOME"/.themes/Arc-"$choice"-Dark"
+  mv $HOME"/.themes/Arc-Darker/openbox-3" $HOME"/.themes/Arc-"$choice"-Darker"
+
+  rm -rf $HOME"/.themes/Arc"
+  rm -rf $HOME"/.themes/Arc-Dark"
+  rm -rf $HOME"/.themes/Arc-Darker"
 
   echo "################################################################"
   echo "Renaming the content of the index.theme"
