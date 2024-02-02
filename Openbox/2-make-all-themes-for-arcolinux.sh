@@ -66,7 +66,12 @@ Vampire
 )
 
 # or just a few
-# arrayname=(Casablanca Crimson)
+list=(
+Aqua
+Archlinux-blue
+Arcolinux-blue
+Azul
+)
 
 for m in "${list[@]}"
   do
@@ -75,6 +80,7 @@ for m in "${list[@]}"
     echo "Downloading from github"
     git clone https://github.com/erikdubois/arc-openbox /tmp/arc-openbox
     rm /tmp/arc-openbox/git*
+    rm /tmp/arc-openbox/setup*
 
     case "${m}" in
 
@@ -129,9 +135,9 @@ for m in "${list[@]}"
         newcolour1="2A8DFF"
         ;;
     Azul)
-        # #456CFF
+        # #3551b7
         choice="Azul"
-        newcolour1="456CFF"
+        newcolour1="3551b7"
         ;;
     Light-salmon)
         # #FFA38D
@@ -403,57 +409,46 @@ for m in "${list[@]}"
   echo "#####################################################################"
 
 
-  #cd arc-theme
-  #[ -d build ] || mkdir build
-  #meson setup --prefix=/tmp/at build/
-  #meson configure --prefix=/tmp/at build/
-  #meson install -C build/
-  #cd ..
-
-
-  echo "#####################################################################"
-  echo "#####################################################################"
-
-
   function makearc {
   # if there is no hidden folder then make one
   [ -d $HOME"/.themes" ] || mkdir -p $HOME"/.themes"
-  cp -rf /tmp/arc-openbox/* $HOME"/.themes"
+  #cp -rf /tmp/arc-openbox/* $HOME"/.themes"
 
-  rm -rf $HOME"/.themes/Arc-"$choice"/openbox-3"
-  rm -rf $HOME"/.themes/Arc-"$choice"-Dark/openbox-3"
-  rm -rf $HOME"/.themes/Arc-"$choice"-Darker/openbox-3"
+  #rm -rf $HOME"/.themes/Arc-"$choice"/openbox-3"
+  #rm -rf $HOME"/.themes/Arc-"$choice"-Dark/openbox-3"
+  #rm -rf $HOME"/.themes/Arc-"$choice"-Darker/openbox-3"
 
-  rm -rf $HOME"/.themes/Arc-"$choice"/Arc"
-  rm -rf $HOME"/.themes/Arc-"$choice"-Dark/Arc-Dark"
-  rm -rf $HOME"/.themes/Arc-"$choice"-Darker/Arc-Darker"
+  #rm -rf $HOME"/.themes/Arc-"$choice"/Arc"
+  #rm -rf $HOME"/.themes/Arc-"$choice"-Dark/Arc-Dark"
+  #rm -rf $HOME"/.themes/Arc-"$choice"-Darker/Arc-Darker"
 
-  mv $HOME"/.themes/Arc/openbox-3" $HOME"/.themes/Arc-"$choice
-  mv $HOME"/.themes/Arc-Dark/openbox-3" $HOME"/.themes/Arc-"$choice"-Dark"
-  mv $HOME"/.themes/Arc-Darker/openbox-3" $HOME"/.themes/Arc-"$choice"-Darker"
+  #rm -rf $HOME"/.themes/Arc"
+  #rm -rf $HOME"/.themes/Arc-Dark"
+  #rm -rf $HOME"/.themes/Arc-Darker"
 
-  rm -rf $HOME"/.themes/Arc"
-  rm -rf $HOME"/.themes/Arc-Dark"
-  rm -rf $HOME"/.themes/Arc-Darker"
+  # echo "################################################################"
+  # echo "Renaming the content of the index.theme"
+  # echo "Arc-$choice-Darker"
+  # find /tmp/arc-openbox/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'Name=Arc-Darker'/'Name=Arc-$choice-Darker'/g' {}  \;
+  # find $HOME"/.themes/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'GtkTheme=Arc-Darker'/'GtkTheme=Arc-$choice-Darker'/g' {}  \;
+  # find $HOME"/.themes/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc-Darker'/'MetacityTheme=Arc-$choice-Darker'/g' {}  \;
+  # echo "################################################################"
+  # echo "Renaming inside the index.theme"
+  # echo "Arc-$choice-Dark"
+  # find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'Name=Arc-Dark'/'Name=Arc-$choice-Dark'/g' {}  \;
+  # find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'GtkTheme=Arc-Dark'/'GtkTheme=Arc-$choice-Dark'/g' {}  \;
+  # find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc-Dark'/'MetacityTheme=Arc-$choice-Dark'/g' {}  \;
+  # echo "################################################################"
+  # echo "Renaming inside the index.theme"
+  # echo "Arc-$choice"
+  # find $HOME"/.themes/Arc-"$choice -name "index.theme" -type f -exec sed -i 's/'Name=Arc'/'Name=Arc-$choice'/g' {}  \;
+  # find $HOME"/.themes/Arc-"$choice -name "index.theme" -type f -exec sed -i 's/'GtkTheme=Arc'/'GtkTheme=Arc-$choice'/g' {}  \;
+  # find $HOME"/.themes/Arc-"$choice -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc'/'MetacityTheme=Arc-$choice'/g' {}  \;
 
-  echo "################################################################"
-  echo "Renaming the content of the index.theme"
-  echo "Arc-$choice-Darker"
-  find $HOME"/.themes/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'Name=Arc-Darker'/'Name=Arc-$choice-Darker'/g' {}  \;
-  find $HOME"/.themes/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'GtkTheme=Arc-Darker'/'GtkTheme=Arc-$choice-Darker'/g' {}  \;
-  find $HOME"/.themes/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc-Darker'/'MetacityTheme=Arc-$choice-Darker'/g' {}  \;
-  echo "################################################################"
-  echo "Renaming inside the index.theme"
-  echo "Arc-$choice-Dark"
-  find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'Name=Arc-Dark'/'Name=Arc-$choice-Dark'/g' {}  \;
-  find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'GtkTheme=Arc-Dark'/'GtkTheme=Arc-$choice-Dark'/g' {}  \;
-  find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc-Dark'/'MetacityTheme=Arc-$choice-Dark'/g' {}  \;
-  echo "################################################################"
-  echo "Renaming inside the index.theme"
-  echo "Arc-$choice"
-  find $HOME"/.themes/Arc-"$choice -name "index.theme" -type f -exec sed -i 's/'Name=Arc'/'Name=Arc-$choice'/g' {}  \;
-  find $HOME"/.themes/Arc-"$choice -name "index.theme" -type f -exec sed -i 's/'GtkTheme=Arc'/'GtkTheme=Arc-$choice'/g' {}  \;
-  find $HOME"/.themes/Arc-"$choice -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc'/'MetacityTheme=Arc-$choice'/g' {}  \;
+  mv /tmp/arc-openbox/Arc/openbox-3 $HOME"/.themes/Arc-"$choice
+  mv /tmp/arc-openbox/Arc-Dark/openbox-3 $HOME"/.themes/Arc-"$choice"-Dark"
+  mv /tmp/arc-openbox/Arc-Darker/openbox-3 $HOME"/.themes/Arc-"$choice"-Darker"
+
   }
 
   makearc

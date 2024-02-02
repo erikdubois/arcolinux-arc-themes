@@ -65,7 +65,12 @@ Vampire
 Warm-pink)
 
 # or just a few
-# arrayname=(Casablanca Crimson)
+arrayname=(
+Aqua
+Archlinux-blue
+Arcolinux-blue
+Azul
+)
 
 for m in "${arrayname[@]}"
   do
@@ -129,9 +134,9 @@ for m in "${arrayname[@]}"
         newcolour1="2A8DFF"
         ;;
     Azul)
-        # #456CFF
+        # #3551b7
         choice="Azul"
-        newcolour1="456CFF"
+        newcolour1="3551b7"
         ;;
     Light-salmon)
         # #FFA38D
