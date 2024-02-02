@@ -22,14 +22,18 @@ Azure
 Azure-dodger-blue
 Blood
 Blue-sky
+Blueberry
 Botticelli
 Bright-lilal
 Carnation
 Carolina-blue
 Casablanca
+Cornflower-blue
 Crimson
+Darkish
 Dawn
 Dodger-blue
+Dracul
 Emerald
 Evopop
 Fern
@@ -52,7 +56,9 @@ Paper
 Pink
 Polo
 Punch
+Purpley
 Red-orange
+Red-violet
 Rusty-orange
 Sky-blue
 Slate-grey
@@ -61,16 +67,20 @@ Soft-blue
 Tacao
 Tangerine
 Tory
-Warm-pink
+Twilight
 Vampire
+Warm-pink
 )
 
 # or just a few
 # list=(
-# Aqua
-# Archlinux-blue
-# Arcolinux-blue
-# Azul
+# Blueberry
+# Cornflower-blue
+# Darkish
+# Dracul
+# Purpley
+# Red-violet
+# Twilight
 # )
 
 for m in "${list[@]}"
@@ -84,6 +94,41 @@ for m in "${list[@]}"
 
     case "${m}" in
 
+    Blueberry)
+        # #52428f
+        choice="Blueberry"
+        newcolour1="52428f"
+        ;;
+    Cornflower-blue)
+        # #3250a7
+        choice="Cornflower-blue"
+        newcolour1="3250a7"
+        ;;
+    Darkish)
+        # #28293d
+        choice="Darkish"
+        newcolour1="28293d"
+        ;;
+    Dracul)
+        # #7e82a0
+        choice="Dracul"
+        newcolour1="7e82a0"
+        ;;
+    Purpley)
+        # #8d2dc9
+        choice="Purpley"
+        newcolour1="8d2dc9"
+        ;;
+    Red-violet)
+        # #901265
+        choice="Red-violet"
+        newcolour1="901265"
+        ;;
+    Twilight)
+        # #44397d
+        choice="Twilight"
+        newcolour1="44397d"
+        ;;
     Blue-sky)
         # #7684a8
         choice="Blue-sky"
